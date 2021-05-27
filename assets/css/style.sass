@@ -1,0 +1,162 @@
+.container
+    width: 1000px
+    padding: 12px
+    margin: 30px auto
+    background: white
+
+$green: #235e3d;
+.green-theme
+    background: url('../img/hojas.jpg') no-repeat fixed
+    header
+        #logo
+            background: $green
+        nav
+            a:hover
+                background: $green
+    .btn
+        background: $green
+$red: red;
+.red-theme
+    background: url('../img/rojo.jpg') no-repeat fixed
+    header
+        #logo
+            background: $red
+        nav
+            a:hover
+                background: $red
+    .btn
+        background: $red
+$blue: blue;
+.blue-theme
+    background: url('../img/cielo.jpg') no-repeat fixed
+    header
+        #logo
+            background: $blue
+        nav
+            a:hover
+                background: $blue
+    .btn
+        background: $blue
+.btn 
+    color: white
+    grid-area: button
+    font-weight: bold
+    height: 40px
+header
+    text-transform: uppercase
+    display: grid
+    grid-template-rows: 80px 12px 40px
+    grid-template-columns: 360px 1fr
+    grid-template-areas: "logo none" ". ." "nav nav"
+    font-weight: bold
+    margin-bottom: 12px
+    *
+        color: white
+    #logo
+        margin: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 10px 20px
+        grid-area: logo
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    nav
+        background: #333
+        grid-area: nav
+        a
+            height: 100%
+            padding: 0 20px
+            display: inline-flex
+            align-items: center
+            text-decoration: none
+            transition: all 500ms
+.slider
+    img
+        height: 300px
+        
+main
+    display: grid
+    grid-template-columns: 3fr 1fr
+    grid-template-areas: "posts aside"
+    #posts
+        font-family: Helvetica, sans-serif
+        grid-area: posts
+        padding: 24px
+        article
+            display: grid
+            grid-template-rows: auto 16px auto 30px
+            grid-template-columns: 1fr 3fr 1fr
+            grid-template-areas: "title title button" "date date date" "content content content" "read . ."
+            margin-bottom: 36px
+            h2
+                margin: 0
+                margin-bottom: 12px
+                grid-area: title
+            .date
+                color: gray
+                grid-area: date
+            .content
+                grid-area: content
+                text-align: justify
+            .read
+                grid-area: read
+    aside
+        padding: 0 12px
+        grid-area: aside
+        h4
+            text-align: center
+            background: url('../img/lines.png') repeat-x
+            line-height: 10px
+            font-family: Helvetica, sans-serif
+            color: #333
+            margin-bottom: 12px
+            span
+                padding: 0 5px
+                background: white
+        img
+            width: 100%
+        p
+            margin: 12px 0
+            text-align: justify
+        form
+            label
+                display: block
+            input
+                margin-bottom: 12px
+footer
+    height: 40px
+    padding: 0 5px
+    background: #333
+    display: flex
+    align-items: center
+    justify-content: space-between
+    box-content: border-box
+    *
+        color: white
+        font-family: Helvetica, sans-serif
+    #to-top
+        cursor: pointer
+
+#theme-change-menu
+    border-radius: 0px 15px 15px 0px
+    height: 160px
+    width: 55px
+    position: fixed
+    left: 0
+    top: 45vh
+    background: rgba(255, 255, 255, 0.3)
+    img
+        width: 40px
+        height: 40px
+        margin: 5px
+        border-radius: 5px
+        cursor: pointer
+
+
+<script>
+    window.onload = () => {
+        if(!!document.getElementById('post-2')) {
+            document.getElementById('post-2').remove();
+        }
+    };
+</script>

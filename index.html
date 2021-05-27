@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto JQuery</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/clock.js"></script>
+</head>
+<body>
+    <!-- Theme Change Menu -->
+    <div id="theme-change-menu">
+        <img src="./assets/img/hojas.jpg" id="theme-green">
+        <img src="./assets/img/rojo.jpg" id="theme-red">
+        <img src="./assets/img/cielo.jpg" id="theme-blue">
+    </div>
+    <!-- Web Content -->
+    <div class="container">
+        <header>
+            <h1 id="logo">practicando js</h1>
+            <nav>
+                <a href="#">inicio</a>
+                <a href="#">reloj</a>
+                <a href="#">sobre mi</a>
+                <a href="#">contacto</a>
+            </nav>
+        </header>
+        <div class="slider">
+            <img src="assets/img/hojas.jpg">
+            <img src="assets/img/rojo.jpg">
+            <img src="assets/img/cielo.jpg">
+        </div>
+        <main>
+            <section id="posts">
+            <!-- Posts -->
+            </section>
+            <aside>
+                <div id="about-me">
+                    <h4><span>¿Quién soy?</span></h4>
+                    <img src="assets/img/caracol.jpg">
+                    <p>Mi nombre es Erika, y soy una jovén desarrolladora web especilizada en JS. Actualmente estoy tratando de aprender sobre NodeJS, express, y angular. Desarrollando un proyecto personal, y haciendo un curso en udemy.</p>    
+                </div>
+                <form id="login">
+                    <h4>Identificate</h4>
+                    <label for="name">Nombre</label><input id="login-name" type="text" name="name" id="name">
+                    <label for="email">Correo</label><input id="login-email" type="text" name="email" id="email">
+                    <label for="pasw">Contraseña</label><input id="login-password" type="password" name="pasw" id="pasw">
+                    <input id="login-button" type="submit" value="Enviar" class="btn">
+                </form>
+            </aside>
+        </main>
+        <footer>
+            <span>Erika Fernandez Moreno | 2020</span>
+            <svg id="to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+            </svg>
+        </footer>
+    </div>
+</body>
+</html>

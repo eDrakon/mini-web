@@ -1,0 +1,248 @@
+.container {
+  width: 1000px;
+  padding: 12px;
+  margin: 30px auto;
+  background: white;
+}
+
+.green-theme {
+  background: url("../img/hojas.jpg") no-repeat fixed;
+}
+
+.green-theme header #logo,
+.green-theme header nav a:hover,
+.green-theme .btn {
+  background: #235e3d;
+}
+
+.red-theme {
+  background: url("../img/rojo.jpg") no-repeat fixed;
+}
+
+.red-theme header #logo,
+.red-theme header nav a:hover,
+.red-theme .btn {
+  background: red;
+}
+
+.blue-theme {
+  background: url("../img/cielo.jpg") no-repeat fixed;
+}
+
+.blue-theme header #logo,
+.blue-theme header nav a:hover,
+.blue-theme .btn {
+  background: blue;
+}
+
+
+
+.btn {
+  color: white;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button;
+  font-weight: bold;
+  height: 40px;
+}
+
+header {
+  text-transform: uppercase;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px 12px 40px;
+      grid-template-rows: 80px 12px 40px;
+  -ms-grid-columns: 360px 1fr;
+      grid-template-columns: 360px 1fr;
+      grid-template-areas: "logo none" ". ." "nav nav";
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+header * {
+  color: white;
+}
+
+header #logo {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header nav {
+  background: #333;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+}
+
+header nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.slider img {
+  height: 300px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "posts aside";
+}
+
+main #posts {
+  font-family: Helvetica, sans-serif;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: posts;
+  padding: 24px;
+}
+
+main #posts article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 16px auto 30px;
+      grid-template-rows: auto 16px auto 30px;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas: "title title button" "date date date" "content content content" "read . .";
+  margin-bottom: 36px;
+}
+
+main #posts article h2 {
+  margin: 0;
+  margin-bottom: 12px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+}
+
+main #posts article .date {
+  color: gray;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: date;
+}
+
+main #posts article .content {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content;
+  text-align: justify;
+}
+
+main #posts article .read {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: read;
+}
+
+main aside {
+  padding: 0 12px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+main aside h4 {
+  text-align: center;
+  background: url("../img/lines.png") repeat-x;
+  line-height: 10px;
+  font-family: Helvetica, sans-serif;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+main aside h4 span {
+  padding: 0 5px;
+  background: white;
+}
+
+main aside img {
+  width: 100%;
+}
+
+main aside p {
+  margin: 12px 0;
+  text-align: justify;
+}
+
+main aside form label {
+  display: block;
+}
+
+main aside form input {
+  margin-bottom: 12px;
+}
+
+footer {
+  height: 40px;
+  padding: 0 5px;
+  background: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-content: border-box;
+}
+
+footer * {
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+footer #to-top {
+  cursor: pointer;
+}
+
+#theme-change-menu {
+  border-radius: 0px 15px 15px 0px;
+  height: 160px;
+  width: 55px;
+  position: fixed;
+  left: 0;
+  top: 45vh;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#theme-change-menu img {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
